@@ -653,11 +653,16 @@
 		return formatStatementList(ast.body);
 	};
 
+	var stringify = function(node) {
+		return formatStatementList(node.body);
+	}
+
 	/*--------------------------------------------------------------------------*/
 
 	var luamin = {
 		'version': '1.0.4',
-		'minify': minify
+		'minify': minify,
+		'stringify': stringify,
 	};
 
 	// Some AMD build optimizers, like r.js, check for specific condition patterns
